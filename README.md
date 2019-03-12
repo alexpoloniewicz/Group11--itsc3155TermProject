@@ -3,15 +3,15 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+### Template 
 
-* Ruby version
+* Ruby version: 2.4.1
 
 * System dependencies
 
-* Configuration
+* Configuration: see gemfile
 
-* Database creation
+* Database creation: Rails model generator 
 
 * Database initialization
 
