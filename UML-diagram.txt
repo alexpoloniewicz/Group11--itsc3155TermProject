@@ -1,0 +1,10 @@
+***paste in yuml editor***
+[foods|time:string;food_class_id:integer;name:sring|create]
+[food_classes|name:string|new;create]
+[managers|username:string;password:string|show]
+[reviews|date:string;email:string;food_id:integer;like:boolean;comment:text|new;create]
+
+[managers]-[foods]
+[managers]-[reviews]
+[foods]food_classes 1-foods*>[food_classes]
+[foods]<reviews*-food 1[reviews]
