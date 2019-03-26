@@ -1,4 +1,7 @@
 <p>
     <strong>Mangager: </strong>
-    <%= @manager.username %>
+    <%= current_manager.username %>
 </p>
+
+<%= link_to "Back", welcome_index_path %>
+<%= link_to "Logout", logout_path, method: :delete %>
