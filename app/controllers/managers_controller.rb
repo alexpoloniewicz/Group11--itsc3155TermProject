@@ -1,10 +1,10 @@
 class ManagersController < ApplicationController
     def index
-        #@manager = Manager.find(manager_params)
+        
     end
     
     def new 
-        #@manager = Manager.index
+        #@manager = Manager.new
     end
     
     def create
@@ -17,11 +17,11 @@ class ManagersController < ApplicationController
     end
     
     def show 
-        @manager = Manager.find(params[:id])
+        @manager = Manager.find_by(id: current_manager[:id])
     end
 end
 
 private
 def manager_params
-   params.require(:manager).permit(:username, :password) 
+   params.require(:manager).permit(:username, :password, :password_confirmation) 
 end

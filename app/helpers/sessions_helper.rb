@@ -1,5 +1,5 @@
 module SessionsHelper
-    def login(manager)
+    def log_in(manager)
         session[:manager_id] = manager.id
     end
     
@@ -12,6 +12,5 @@ module SessionsHelper
     def log_out
         session.delete(:manager_id)
         @current_manager = nil
-        redirect_to welcome_index_path
     end
 end

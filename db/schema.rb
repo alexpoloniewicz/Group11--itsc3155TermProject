@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_25_223454) do
+ActiveRecord::Schema.define(version: 2019_03_27_140820) do
 
   create_table "managers", force: :cascade do |t|
     t.string "username"
-    t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
 end

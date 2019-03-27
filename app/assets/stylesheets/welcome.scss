@@ -2,12 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
- body{
-     background-color: #9c29b7;
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+
+body{
+     background-color: #9c29b7; /* Purple */
      font-family: 'Archivo Black', sans-serif;
  }
- h1{
-     color: #fefb64;
+h1{
+     color: #fefb64; /* Yellow */
      text-align: center;
  }
  
@@ -15,6 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 .button{
     background-color: #4dd7fa; /* Blue */
@@ -27,4 +30,15 @@
     text-decoration: none;
     border-radius: 10px;
     margin: 10em;
+}
+.form_button1{
+    background-color: #4dd7fa; /* Blue */
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 16px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
 }

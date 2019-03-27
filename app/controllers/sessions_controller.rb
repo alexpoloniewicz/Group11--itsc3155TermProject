@@ -1,14 +1,14 @@
 class SessionsController < ApplicationController
   def new
     if !current_manager.nil?
-      redirect_to Manager.find_by(username: current_manager.username)
+      redirect_to Manager.find_by(id: session[:manager_id])
     end
   end
   
   def create
     manager = Manager.find_by(username: session_params[:username])
-    if session_params[:password] == manager.password
-      login manager
+    if manager && manager.authenticate(session_params[:password])
+      log_in manager
       redirect_to manager
     else
       render 'new'
@@ -16,7 +16,9 @@ class SessionsController < ApplicationController
   end
   
   def destroy
+    # see session helper
     log_out
+    redirect_to welcome_index_path
   end
 end
 
