@@ -2,22 +2,45 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+ body{
+=======
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black');
 
 body{
      background-color: #9c29b7; /* Purple */
      font-family: 'Archivo Black', sans-serif;
      color: white;
+     background: url("background02.jpg");
+     background-repeat: no-repeat;
+     background-size: 100% 70%;
+     background-color: #9c29b7;
  }
 h1{
      color: #fefb64; /* Yellow */
      text-align: center;
- }
+     //background: url("sovi.jpg");
+    /* background: top center / 100px 200px;*/
+    
+    
+     
+     
+     }
+     
+ /*.background{
+     display: block;
+     z-index: -1;
+     margin-left: auto;
+     margin-right: auto;
+     width: 50%;
+     height: 20em;
+     
+ }*/
  
 #contents{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 25%;
     color: white;
 }
 .button{
