@@ -11,8 +11,7 @@ class ManagersController < ApplicationController
         @manager = Manager.new(manager_params)
         
         if @manager.save
-            
-            redirect_to @article 
+            redirect_to @manager 
         end
     end
     
