@@ -1,7 +1,5 @@
+<<<<<<< HEAD
 <!-- Import fonts within style tag -->
-<style>
-    @import url('https://fonts.googleapis.com/css?family=Archivo+Black');
-</style>
 
 <body>
     <!-- <%= image_tag("sovi.jpg", :class => "background")%>-->
@@ -10,12 +8,10 @@
      <section>
      <div id = "contents"> <!-- put image here I think --> 
 
-    <%= button_to "Login", nil, {:class => "button"} %>
+    <%= button_to "Login", login_path, :class => "button", :method => :get %> <!--login_path is defined in routes.rb-->
     <%= button_to "Review", nil, {:class => "button"} %>
     <!-- %= button_to "Login", managers_path, :class => "button", :method => :get % --> 
     </div>
     </section>
 </body>
-
-
 

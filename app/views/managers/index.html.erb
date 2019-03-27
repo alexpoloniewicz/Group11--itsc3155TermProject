@@ -1,0 +1,18 @@
+<div id = "contents">
+<%= form_for :manager, url: managers_path do |f| %>  
+  <p>
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </p>
+ 
+  <p>
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </p>
+ 
+  <p>
+    <%= f.submit "Login" %>
+  </p>
+  
+<% end %>  
+</div>
