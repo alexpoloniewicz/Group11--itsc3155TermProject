@@ -1,10 +1,19 @@
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Select Food
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <% @foods.each do |food| %>
       <a class = "dropdown-item"><%= link_to "#{food.name}", filtered_data_path(food)%></a>
     <% end %>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Select Food
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      
+      <a class = "dropdown-item"><%= link_to "breakfast", filtered_data_path("breakfast")%></a>
   </div>
 </div>

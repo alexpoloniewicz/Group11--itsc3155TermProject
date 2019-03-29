@@ -1,5 +1,62 @@
 <%= render'form' %>
 
-<div>
-    <%= tally(@food.id) %>
-</div>
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    
+    // Load the Visualization API and the piechart package.
+    google.charts.load('current', {'packages':['corechart']});
+      
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.charts.setOnLoadCallback(drawChart);
+      
+    function drawChart() {
+          
+      // Create our data table out of JSON data loaded from server.
+      var jsonData = JSON.parse('<%= @foods.to_json(:only => [ :name, :likes, :dislikes ]).html_safe %>')
+      console.log(jsonData)
+      
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'name');
+      data.addColumn('number', 'likes');
+      data.addColumn('number', 'dislikes');
+      jsonData.forEach(function(obj) { 
+          array = [obj.name,obj.likes,obj.dislikes]
+          data.addRow(array)
+          //console.log(obj.name); 
+      });
+    
+      var options_fullStacked = {
+          isStacked: 'percent',
+          width: 600,
+          height: 400,
+          legend: {position: 'top', maxLines: 3},
+          hAxis: {
+            minValue: 0,
+            ticks: [0, .3, .6, .9, 1]
+          }
+        };
+
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+      chart.draw(data, options_fullStacked);
+      
+    }
+
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+    
+    <div>
+        <%= @foods.to_json(:only => [ :name, :likes, :dislikes ]) %>
+        <!--%= tally(@food) %>-->
+    </div>
+  </body>
+</html>
+

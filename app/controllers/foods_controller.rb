@@ -9,7 +9,8 @@ class FoodsController < ApplicationController
     
     def show
         @foods = Food.all
-        @food = Food.find(params[:format])
+        #@food = Food.find(params[:format])
+        @specific_foods = Food.find_by(tod: params[:tod])
     end
 end
 private
