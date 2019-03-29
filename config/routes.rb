@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  get    '/data',    to: 'foods#index'
+  get    '/filtered_data', to: 'foods#show'
   resources :managers
 end
