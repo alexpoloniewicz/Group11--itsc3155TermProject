@@ -1,15 +1,5 @@
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Select Food
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <% @foods.each do |food| %>
-      <% food_id = food.id %>
-      <a class = "dropdown-item"><%= link_to "#{food.name}", filtered_data_path(food)%></a>
-    <% end %>
-  </div>
-</div>
+<%= render'form' %>
 
 <div>
-    <%= tally(@food) %>
+    <%= tally(@food.id) %>
 </div>
