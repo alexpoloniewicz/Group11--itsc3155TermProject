@@ -4,6 +4,7 @@
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <% @foods.each do |food| %>
+      <% food_id = food.id %>
       <a class = "dropdown-item"><%= link_to "#{food.name}", filtered_data_path(food)%></a>
     <% end %>
   </div>

@@ -8,6 +8,12 @@ class FoodsController < ApplicationController
     end
     
     def show
-        @food = Food.find(params[:id])
+        @foods = Food.all
+        @food = Food.find(params[:format])
     end
 end
+private
+def article_params
+   params.require(:food).permit(:tod, :name) 
+end
+
