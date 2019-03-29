@@ -10,7 +10,7 @@ class FoodsController < ApplicationController
     def show
         @foods = Food.all
         #@food = Food.find(params[:format])
-        @specific_foods = Food.find_by(tod: params[:tod])
+        @specific_foods = Food.where(tod: params[:format])
     end
 end
 private

@@ -13,7 +13,7 @@
     Select Food
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      
-      <a class = "dropdown-item"><%= link_to "breakfast", filtered_data_path("breakfast")%></a>
+      <% breakfast = "lunch" %>
+      <a class = "dropdown-item"><%= link_to "breakfast", filtered_data_path(breakfast)%></a>
   </div>
 </div>
