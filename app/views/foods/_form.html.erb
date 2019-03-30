@@ -10,10 +10,12 @@
 </div>
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Select Food
+    Select TOD(Time Of Day)
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <% breakfast = "breakfast" %>
-      <a class = "dropdown-item"><%= link_to "breakfast", filtered_data_path(breakfast)%></a>
+      <a class = "dropdown-item"><%= link_to "Breakfast", filtered_data_path(breakfast)%></a>
+      <% lunch = "lunch" %>
+      <a class = "dropdown-item"><%= link_to "Lunch", filtered_data_path(lunch)%></a>
   </div>
 </div>

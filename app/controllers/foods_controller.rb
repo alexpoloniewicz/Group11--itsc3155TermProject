@@ -9,12 +9,19 @@ class FoodsController < ApplicationController
     
     def show
         @foods = Food.all
-        #@food = Food.find(params[:format])
-        @specific_foods = Food.where(tod: params[:format])
+        if contains_letter(params[:format])
+            @specific_foods = Food.where(tod: params[:format])
+        else
+            @specific_foods = Food.where(id: params[:format])
+        end
+        
     end
 end
 private
 def article_params
    params.require(:food).permit(:tod, :name) 
+end
+def contains_letter(str)
+  str =~ /[a-z]/
 end
 

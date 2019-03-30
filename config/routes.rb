@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   get    '/data',    to: 'foods#index'
   get    '/filtered_data', to: 'foods#show'
+  get    'add_food', to: "foods#new"
   resources :managers
 end

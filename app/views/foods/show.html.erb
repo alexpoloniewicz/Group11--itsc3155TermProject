@@ -23,6 +23,7 @@
       data.addColumn('string', 'name');
       data.addColumn('number', 'likes');
       data.addColumn('number', 'dislikes');
+      //use the json data in the rows
       if (Object.keys(jsonData).length > 1){
           jsonData.forEach(function(obj) { 
               array = [obj.name,obj.likes,obj.dislikes]
