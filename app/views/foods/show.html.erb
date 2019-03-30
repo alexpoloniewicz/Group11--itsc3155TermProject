@@ -45,7 +45,8 @@
           hAxis: {
             minValue: 0,
             ticks: [0, .3, .6, .9, 1]
-          }
+          },
+          colors: ['#28ed2b', '#f44141']
         };
 
       // Instantiate and draw our chart, passing in some options.
@@ -59,10 +60,12 @@
 
   <body>
     <!--Div that will hold the pie chart-->
-    <div id="chart_div" class = "container"></div>
-    
+    <%if !current_manager.nil? %>
+      <div id="chart_div" class="d-flex justify-content-around"></div>
+    <%end%>
+    <div style = "height: 50px;" ></div>
     <div>
-        <%= @specific_foods.to_json(:only => [ :name, :likes, :dislikes ]) %>
+        <!--%= @specific_foods.to_json(:only => [ :name, :likes, :dislikes ]) %-->
         <!--%= tally(@food) %>-->
     </div>
   </body>
