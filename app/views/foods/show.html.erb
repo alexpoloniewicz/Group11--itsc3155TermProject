@@ -58,7 +58,7 @@
 
   <body>
     <!--Div that will hold the pie chart-->
-    <div id="chart_div"></div>
+    <div id="chart_div" class = "container"></div>
     
     <div>
         <%= @specific_foods.to_json(:only => [ :name, :likes, :dislikes ]) %>
