@@ -5,7 +5,18 @@ class FoodsController < ApplicationController
     end
     
     def new
-
+        @foodClass = FoodClass.all
+        @food = Food.new
+    end
+    def create 
+        @food = Food.new(food_params)
+        # ---byebug 
+        if @food.save # will return false is save is called on an invalid food
+            # ---byebug 
+            redirect_to filtered_data_path 
+        else
+            render 'new'
+        end
     end
     
     def show
@@ -23,8 +34,8 @@ class FoodsController < ApplicationController
     end
 end
 private
-def article_params
-   params.require(:food).permit(:tod, :name) 
+def food_params
+   params.require(:food).permit(:name, :FoodClass_id) 
 end
 def contains_letter(str)
   str =~ /[a-z]/

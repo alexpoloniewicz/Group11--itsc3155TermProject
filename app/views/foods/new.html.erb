@@ -7,8 +7,11 @@
         <p>
           <%= f.text_field :name %>
         </p>
-        <!-- put dropdown for class -->
-        <!-- put dropdown for time of day-->
+        
+          <%= f.collection_select :FoodClass_id, FoodClass.all, :id, :name%>
+
+
+          <!-- put dropdown for time of day-->
         <p>
           <%= f.submit "submit" , :id => "button", :class => "btn btn-primary"%>
         </p>
