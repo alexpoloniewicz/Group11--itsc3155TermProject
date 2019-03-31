@@ -1,6 +1,7 @@
 class FoodsController < ApplicationController
     def index
         @foods = Food.all
+        @foodClass = FoodClass.all
     end
     
     def new
