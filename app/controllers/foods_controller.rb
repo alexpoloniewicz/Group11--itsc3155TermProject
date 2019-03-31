@@ -9,7 +9,11 @@ class FoodsController < ApplicationController
     
     def show
         @foods = Food.all
-        if contains_letter(params[:format])
+        @foodClass = FoodClass.all
+        
+        if FoodClass.exists?(:name => params[:format])
+            @specific_foods = Food.where(FoodClass_id: FoodClass.where(name: params[:format]))
+        elsif contains_letter(params[:format])
             @specific_foods = Food.where(tod: params[:format])
         else
             @specific_foods = Food.where(id: params[:format])

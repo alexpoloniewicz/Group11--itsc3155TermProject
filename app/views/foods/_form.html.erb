@@ -21,6 +21,16 @@
           <a class = "dropdown-item"><%= link_to "Lunch", filtered_data_path(lunch)%></a>
       </div>
     </div>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select Food class
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <% @foodClass.each do |foodclass| %>
+            <a class = "dropdown-item"><%= link_to "#{foodclass.name}", filtered_data_path(foodclass.name)%></a>
+          <% end %>
+      </div>
+    </div>
   </div>
   <!-- spacer for dropdowns -->
   <div style="height: 50px;"></div>
