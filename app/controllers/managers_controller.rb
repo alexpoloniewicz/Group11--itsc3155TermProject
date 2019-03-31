@@ -9,7 +9,6 @@ class ManagersController < ApplicationController
     
     def create
         @manager = Manager.new(manager_params)
-        
         if @manager.save
             redirect_to @manager 
         end

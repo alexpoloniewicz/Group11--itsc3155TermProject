@@ -1,17 +1,67 @@
 
 <!-- Import fonts within style tag -->
-
+<!--
 <body>
+<<<<<<< HEAD
     
+=======
+    <!--%= image_tag("sovi.jpg", :class => "background")%>
+>>>>>>> 43ed28ee0a0b6597bb939f3a6e042504f214ad28
      <h1>Break Bread</h1>
      
      <section>
-     <div id = "contents"> <!-- put image here I think --> 
+     <div id = "contents"> <!-- put image here I think -
 
-    <%= button_to "Login", login_path, :class => "button", :method => :get %> <!--login_path is defined in routes.rb-->
-    <%= button_to "Review", nil, {:class => "button"} %>
-    <!-- %= button_to "Login", managers_path, :class => "button", :method => :get % --> 
+    %= button_to "Login", login_path, :class => "button", :method => :get %> <!--login_path is defined in routes.rb
+    %= button_to "Review", nil, {:class => "button"} %>
+    <!-- %= button_to "Login", managers_path, :class => "button", :method => :get % 
     </div>
     </section>
 </body>
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+
+  <!-- Header - set the background image for the header in the line below -->
+  <header class="py-5 bg-image-full" id = "image-background1">
+    <!--<img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt="">--><!-- we can put a logo here if we want -->
+    <div style = "height: 200px;"></div>
+  </header>
+
+  <!-- Content section -->
+  <section class="py-5">
+    <div class="container">
+      <h1 id = "page-title">Bread Bread</h1>
+      <p class="lead">Welcome to your solution to improving your dinning at Sovi</p>
+      <h2>Submit a Review</h2>
+      <div class = "row">
+          <div class = "col-sm-12 text-center">
+            <%= button_to "Review", nil, :id => "button", :class => "btn center-block" %>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Section - set the background image for the header in the line below -->
+  <section class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1081');">
+    <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
+    <div style="height: 200px;"></div>
+  </section>
+
+  <!-- Content section -->
+  <section class="py-5">
+    <div class="container">
+      <h1>Managers</h1>
+      <p class="lead">Login</p>
+      <%= button_to "Login", login_path, :id => "button", :class => "btn center-block", :method => :get %> <!--login_path is defined in routes.rb-->
+    </div>
+  </section>
+
+
+</body>
+
+</html>
 

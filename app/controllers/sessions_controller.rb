@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def new
     # if the manager(user) is logged in, they will be redirected to another page
     if !current_manager.nil? # defined in session helper
-      redirect_to Manager.find_by(id: session[:manager_id])
+      redirect_to data_path #Manager.find_by(id: session[:manager_id])
     end
   end
   
@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     @manager = Manager.find_by(username: session_params[:username])
     if @manager && @manager.authenticate(session_params[:password])
       log_in @manager # defined in session helper
-      redirect_to @manager
+      redirect_to data_path
     else
       render 'new' #render new.html.erb if the login fails
     end

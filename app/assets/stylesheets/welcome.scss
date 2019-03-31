@@ -3,9 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black');
-
+//@import url(vendor)
+/*
 body{
-     background-color: #9c29b7; /* Purple */
+     background-color: #9c29b7; /* Purple 
      font-family: 'Archivo Black', sans-serif;
      color: white;
      background: url("background02.jpg");
@@ -15,11 +16,10 @@ body{
  }
 <<<<<<< HEAD
 h1{
-     color: #fefb64; /* Yellow */
+     color: #fefb64; /* Yellow 
      text-align: center;
-     //background: url("sovi.jpg");
-    /* background: top center / 100px 200px;*/
 }
+<<<<<<< HEAD
      
  /*.background{
      display: block;
@@ -36,6 +36,8 @@ h1{
 }
 >>>>>>> cameron
      
+=======
+>>>>>>> 43ed28ee0a0b6597bb939f3a6e042504f214ad28
  
 #contents{
     display: flex;
@@ -44,18 +46,27 @@ h1{
     margin-top: 25%;
     color: white;
 }
+<<<<<<< HEAD
 
 .button{
+=======
+*/
+#page-title{
+    color: #fefb64;
+}
+#image-background1{
+    background-image: url("background02.jpg");
+}
+#button{
+>>>>>>> 43ed28ee0a0b6597bb939f3a6e042504f214ad28
     background-color: #4dd7fa; /* Blue */
-    font-family: 'Archivo Black', sans-serif;
+    //font-family: 'Archivo Black', sans-serif;
     font-size: 16px;
-    border: none;
+    //border: none;
     color: white;
     padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
     border-radius: 10px;
-    margin: 10em;
+    //margin: 1px;
 }
 .form_button1{
     background-color: #4dd7fa; /* Blue */
