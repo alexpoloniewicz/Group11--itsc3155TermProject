@@ -39,7 +39,7 @@
       <h2>Submit a Review</h2>
       <div class = "row">
           <div class = "col-sm-12 text-center">
-            <%= button_to "Review", nil, :id => "button", :class => "btn center-block" %>
+            <%= button_to "Review", submit_review_path, :id => "button", :class => "btn center-block", :method => :get  %>
           </div>
       </div>
     </div>

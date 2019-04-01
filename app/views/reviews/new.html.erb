@@ -1,0 +1,19 @@
+<section class = "py-5">
+  <div class = "container">
+  <h1></h1>
+  
+    <div>
+      <%= bootstrap_form_for :review, url: submit_review_path do |f| %>  
+          <%= f.collection_select :food_id, Food.all, :id, :name%>
+          <%= f.select(:like, options_for_select([["like", 1], ['dislike', 1]]))%>
+          
+          <!-- put dropdown for time of day-->
+          <div style = "height: 50px;"></div>
+        <p>
+          <%= f.submit "submit" , :id => "button", :class => "btn btn-primary"%>
+        </p>
+        
+      <% end %>  
+    </div>
+  </div>
+</section>

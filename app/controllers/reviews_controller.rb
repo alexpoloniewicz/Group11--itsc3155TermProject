@@ -3,8 +3,19 @@ class ReviewsController < ApplicationController
         @foods = Food.all
     end
     
+      
     def new
-        @food = Food.find_by(id: 1)
+        @review = Review.new
+    end
+    def create 
+        @review = Review.new(review_params)
+        # ---byebug 
+        if @review.save # will return false is save is called on an invalid food
+            # ---byebug 
+            redirect_to welcome_index_path 
+        else
+            render 'new'
+        end
     end
     
     def show
@@ -12,4 +23,8 @@ class ReviewsController < ApplicationController
         @food = Food.find_by()
         #@likecount = tally(@food)
     end
+end
+private
+def review_params
+   params.require(:review).permit(:food_id, :like) 
 end

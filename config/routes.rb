@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   get    '/filtered_data', to: 'foods#show'
   get    'add_food', to: 'foods#new'
   post   'add_food', to: 'foods#create'
+  get    '/submit_review', to: 'reviews#new'
+   post   '/submit_review', to: 'reviews#create'
   resources :managers
 end

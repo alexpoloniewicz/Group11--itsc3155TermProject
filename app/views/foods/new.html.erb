@@ -1,16 +1,13 @@
 <section class = "py-5">
   <div class = "container">
-  <h1>Managers</h1>
+  <h1>Add Food</h1>
   
     <div>
       <%= bootstrap_form_for :food, url: add_food_path do |f| %>  
         <p>
           <%= f.text_field :name %>
         </p>
-        
           <%= f.collection_select :FoodClass_id, FoodClass.all, :id, :name%>
-
-
           <!-- put dropdown for time of day-->
         <p>
           <%= f.submit "submit" , :id => "button", :class => "btn btn-primary"%>

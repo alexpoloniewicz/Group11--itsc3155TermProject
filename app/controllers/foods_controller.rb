@@ -3,8 +3,8 @@ class FoodsController < ApplicationController
         @foods = Food.all
         @foodClass = FoodClass.all
     end
-    
-    def new
+
+      def new
         @foodClass = FoodClass.all
         @food = Food.new
     end
