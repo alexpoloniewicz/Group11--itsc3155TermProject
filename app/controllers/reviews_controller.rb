@@ -9,7 +9,12 @@ class ReviewsController < ApplicationController
     end
     def create 
         @review = Review.new(review_params)
-        # ---byebug 
+        # ---byebug
+        if @review[:like] == 1
+            @review[:dislike] = 0
+        else
+            @review[:dislike] = 1
+        end
         if @review.save # will return false is save is called on an invalid food
             # ---byebug 
             redirect_to welcome_index_path 

@@ -32,6 +32,11 @@ class FoodsController < ApplicationController
         end
         
     end
+    
+    def edit
+        @food = Food.where(id: params[:format])
+    end
+    
 end
 private
 def food_params

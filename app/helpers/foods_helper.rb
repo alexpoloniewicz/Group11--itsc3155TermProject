@@ -14,4 +14,9 @@ module FoodsHelper
         food.update(likes: food[:likes], dislikes: food[:dislikes])
         hash = food.to_json # we will need this json string to use google charts
     end
+    
+    def times_of_day
+        array = ["all day", "breakfast", "lunch", "dinner"]
+    end
+
 end
