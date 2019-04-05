@@ -23,6 +23,7 @@ class FoodsController < ApplicationController
         @foods = Food.all
         @foodClass = FoodClass.all
         
+        # check if the parameter passed is a FoodClass model
         if FoodClass.exists?(:name => params[:format])
             @specific_foods = Food.where(FoodClass_id: FoodClass.where(name: params[:format]))
         elsif contains_letter(params[:format])
