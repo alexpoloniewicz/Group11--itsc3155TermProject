@@ -40,7 +40,7 @@ class FoodsController < ApplicationController
 end
 private
 def food_params
-   params.require(:food).permit(:name, :FoodClass_id) 
+   params.require(:food).permit(:name, :FoodClass_id, :tod) 
 end
 def contains_letter(str)
   str =~ /[a-z]/
