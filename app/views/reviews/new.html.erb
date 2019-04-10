@@ -1,9 +1,25 @@
 <section class = "py-5">
   <div class = "container">
   <h1></h1>
+    <div>
+      <% if @review.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@review.errors.count, "error") %> prohibited
+        this review from being saved:
+      </h2>
+      <ul>
+        <% @review.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    </div>
   
     <div>
-      <%= bootstrap_form_for :review, url: submit_review_path do |f| %>  
+      <%= bootstrap_form_for :review, url: submit_review_path do |f| %> 
+          <%= f.text_field :email %>
           <%= f.collection_select :food_id, Food.all, :id, :name%>
           <%= f.select(:like, options_for_select([["like", 1], ['dislike', 0]]))%>
           

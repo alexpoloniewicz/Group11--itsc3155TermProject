@@ -8,19 +8,27 @@ class ReviewsController < ApplicationController
     end
     def create
         @review = Review.new(review_params)
+        # find reviews submited today that match the email and food_id of the 
+        # review being submited
+        @check_r = Review.find_by(updated_at: Date.today.all_day, email: @review.email, food_id: @review.food_id)
         @food = Food.where(id: @review[:food_id])
         if @review[:like] == 1
             @review[:dislike] = 0
         else
             @review[:dislike] = 1
         end
-        if @review.save 
+        
+        if !@check_r.nil?
+            # render an alert instend of new
+            render 'new'
+        elsif @review.save 
             # ---byebug 
-            redirect_to welcome_index_path 
+            redirect_to welcome_index_path
+            tally(@food)
         else
             render 'new'
         end
-        tally(@food)
+        
     end
     
     def show
@@ -31,7 +39,7 @@ class ReviewsController < ApplicationController
 end
 private
 def review_params
-   params.require(:review).permit(:food_id, :like) 
+   params.require(:review).permit(:food_id, :email, :like) 
 end
 # tally reviews
 def tally(food)
