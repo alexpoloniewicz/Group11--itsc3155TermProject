@@ -16,13 +16,12 @@
     </div>
   <% end %>
     </div>
-  
     <div>
       <%= bootstrap_form_for :review, url: submit_review_path do |f| %> 
           <%= f.text_field :email %>
           <%= f.collection_select :food_id, Food.all, :id, :name%>
           <%= f.select(:like, options_for_select([["like", 1], ['dislike', 0]]))%>
-          
+          <%= f.select(:comment, options_for_select(preselect))%>
           <!-- put dropdown for time of day-->
           <div style = "height: 50px;"></div>
         <p>
