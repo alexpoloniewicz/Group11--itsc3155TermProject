@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_10_001912) do
+ActiveRecord::Schema.define(version: 2019_04_12_165454) do
 
   create_table "food_classes", force: :cascade do |t|
     t.string "name"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2019_04_10_001912) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email"
+    t.string "comment"
     t.index ["food_id"], name: "index_reviews_on_food_id"
   end
 

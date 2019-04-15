@@ -1,14 +1,14 @@
 module ReviewsHelper
     def preselect 
-        @preselect = ["Too much seasoning",
+        @preselect = ["Flawless!",
+                      "Too much seasoning",
                       "Too bland",
                       "Served too often",
                       "Temperature was off",
                       "Seemed unsanitary",
                       "Not served often enough",
                       "My favorite dish",
-                      "Perfect amount of seasoning",
-                      "Flawless!"]
+                      "Perfect amount of seasoning"]
     end
     # tally reviews
     def tally(food)

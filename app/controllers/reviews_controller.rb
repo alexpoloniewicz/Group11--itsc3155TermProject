@@ -20,6 +20,8 @@ class ReviewsController < ApplicationController
         
         if !@check_r.nil?
             # render an alert instend of new
+            #render html: "<script>confirm('You are only allowed one review per day per item')</script>".html_safe and action::new
+            flash[:message] = "You are only allowed one review per day per item!"
             render 'new'
         elsif @review.save 
             # ---byebug 
@@ -39,5 +41,5 @@ class ReviewsController < ApplicationController
 end
 private
 def review_params
-   params.require(:review).permit(:food_id, :email, :like) 
+   params.require(:review).permit(:food_id, :email, :like,:comment) 
 end
