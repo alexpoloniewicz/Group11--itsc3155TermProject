@@ -13,4 +13,5 @@ Food.create!(name: "friut loops", tod: "breakfast", FoodClass_id: 1, likes: 20, 
 Food.create!(name: "captain krunch", tod: "breakfast", FoodClass_id: 1, likes: 12, dislikes: 5)
 Food.create!(name: "eggs", tod: "breakfast", FoodClass_id: 2, likes: 15, dislikes: 20)
 Food.create!(name: "pizza", tod: "breakfast", FoodClass_id: 2, likes: 50, dislikes: 7)
-Food.create!(name: "friut loops", tod: "breakfast", FoodClass_id: 1, likes: 20, dislikes: 5)
+Food.create!(name: "potato wedges", tod: "lunch", FoodClass_id: 1, likes: 20, dislikes: 5)
+Food.create!(name: "chicken alfredo", tod: "lunch", FoodClass_id: 1, likes: 20, dislikes: 5)

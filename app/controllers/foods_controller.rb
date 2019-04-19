@@ -22,6 +22,7 @@ class FoodsController < ApplicationController
     def show
         @foods = Food.all
         @foodClass = FoodClass.all
+        @reviews = nil
         
         # check if the parameter passed is a FoodClass model
         if FoodClass.exists?(:name => params[:format])
@@ -31,7 +32,7 @@ class FoodsController < ApplicationController
         else
             @specific_foods = Food.where(id: params[:format])
         end
-        
+        @reviews = Review.where(food_id: @specific_foods.ids)
     end
     
     def edit
