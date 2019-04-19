@@ -43,10 +43,18 @@
             height: 400,
             legend: {position: 'top', maxLines: 3},
             hAxis: {
+              textStyle:{color: '#FFF'},
               minValue: 0,
               ticks: [0, .3, .6, .9, 1]
             },
-            colors: ['#28ed2b', '#f44141']
+            vAxis: {
+              textStyle: {color: '#FFF'}
+            },
+            legend: {
+              textStyle: {color: '#FFF'}
+            },
+            colors: ['#28ed2b', '#f44141'],
+            backgroundColor: '#494848'
           };
   
         // Instantiate and draw our chart, passing in some options.
@@ -115,7 +123,18 @@
       
         var options = {
             width: 600,
-            height: 400
+            height: 400,
+            hAxis: {
+              textStyle:{color: '#FFF'}
+            },
+            vAxis: {
+              textStyle: {color: '#FFF'}
+              
+            },
+            legend: {
+              textStyle: {color: '#FFF'}
+            },
+            backgroundColor: '#494848'
             //legend: {position: 'top', maxLines: 3}
             //colors: ['#28ed2b', '#f44141']
           };
