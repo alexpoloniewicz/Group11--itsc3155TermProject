@@ -9,5 +9,4 @@ And I should see the "Password" field
 
 When I enter "SoviMaster" into the Username field
 And I enter "godchef" into the Password field
-And I click on the " Login " button
-Then I should be on the data page
+Then I click on the " Login " button
