@@ -35,8 +35,12 @@
   <section class="py-5">
     <div class="container">
       <h1 id = "page-title">Break Bread</h1>
-      <p class="lead">Welcome to your solution to improving your dinning at Sovi</p>
-      <h2>Submit a Review</h2>
+      <div class = "d-flex justify-content-around">
+        <p class="lead">Welcome to your solution to improving your dinning at Sovi</p>
+      </div>
+      <div class = "d-flex justify-content-around">
+        <h2>Submit a Review</h2>
+      </div>
       <div class = "row">
           <div class = "col-sm-12 text-center">
             <%= button_to "Review", submit_review_path, :id => "button", :class => "btn center-block", :method => :get  %>
