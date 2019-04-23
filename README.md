@@ -1,5 +1,5 @@
 # Group11--itsc3155TermProject
-[wiki](https://github.com/alexpoloniewicz/Group11--itsc3155TermProject/wiki)
+### [wiki](https://github.com/alexpoloniewicz/Group11--itsc3155TermProject/wiki)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
