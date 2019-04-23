@@ -32,3 +32,4 @@ Review.create!(email: "brand949@gmail.com", food_id: 3, like: 1, dislike: 0, com
 Review.create!(email: "brand949@gmail.com", food_id: 6, like: 1, dislike: 0, comment: preselect[7])
 Review.create!(email: "brand949@gmail.com", food_id: 2, like: 0, dislike: 1, comment: preselect[5])
 Review.create!(email: "brand949@gmail.com", food_id: 5, like: 1, dislike: 0, comment: preselect[6])
+Review.create!(email: "brand949@gmail.com", food_id: 1, like: 0, dislike: 1, comment: preselect[3])
