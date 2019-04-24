@@ -50,7 +50,7 @@
   </section>
 
   <!-- Image Section - set the background image for the header in the line below -->
-  <section class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1081');">
+  <section class="py-5 bg-image-full" id= "image-background2">
     <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
     <div style="height: 200px;"></div>
   </section>
@@ -58,8 +58,12 @@
   <!-- Content section -->
   <section class="py-5">
     <div class="container">
-      <h1>Managers</h1>
-      <p class="lead">Login</p>
+      <div class = "d-flex justify-content-around">
+        <h1>Managers</h1>
+      </div>
+      <div class = "d-flex justify-content-around">
+        <p class="lead">Login</p>
+      </div>  
       <%= button_to "Login", login_path, :id => "button", :class => "btn center-block", :method => :get %> <!--login_path is defined in routes.rb-->
     </div>
   </section>
