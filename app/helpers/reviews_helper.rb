@@ -8,7 +8,8 @@ module ReviewsHelper
                       "Seemed unsanitary",
                       "Not served often enough",
                       "My favorite dish",
-                      "Perfect amount of seasoning"]
+                      "Perfect amount of seasoning",
+                      "It was OK"]
     end
     # tally reviews
     def tally(food)
