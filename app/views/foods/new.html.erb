@@ -1,14 +1,14 @@
 <section class = "py-5">
   <div class = "container">
-  <h1>Add Food</h1>
+  <h1>Add Menu Item</h1>
   
     <div>
       <%= bootstrap_form_for :food, url: add_food_path do |f| %>  
         <p>
-          <%= f.text_field :name %>
+          <%= f.text_field :name, label: "Name of menu item" %>
         </p>
-          <%= f.collection_select :FoodClass_id, FoodClass.all, :id, :name%>
-          <%= f.select(:tod, options_for_select(times_of_day))%>
+          <%= f.collection_select :FoodClass_id, FoodClass.all, :id, :name, label: "Class"%>
+          <%= f.select(:tod, options_for_select(times_of_day), label: "Time of Day")%>
         <p>
           <%= f.submit "submit" , :id => "button", :class => "btn btn-primary"%>
         </p>
