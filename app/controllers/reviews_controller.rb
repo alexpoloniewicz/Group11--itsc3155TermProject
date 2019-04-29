@@ -20,8 +20,7 @@ class ReviewsController < ApplicationController
         
         if !@check_r.nil?
             # render an alert instend of new
-            #render html: "<script>confirm('You are only allowed one review per day per item')</script>".html_safe and action::new
-            flash[:message] = "You are only allowed one review per day per item!"
+            flash.now.alert = "You are only allowed one review per item, each day!"
             render 'new'
         elsif @review.save 
             # ---byebug 
@@ -36,7 +35,6 @@ class ReviewsController < ApplicationController
     def show
         @foods = Food.all
         @food = Food.find_by()
-        #@likecount = tally(@food)
     end
 end
 private

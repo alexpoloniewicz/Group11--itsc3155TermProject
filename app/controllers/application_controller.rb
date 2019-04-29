@@ -3,5 +3,4 @@ class ApplicationController < ActionController::Base
     include SessionsHelper
     include ReviewsHelper
     include FoodsHelper
-    
 end

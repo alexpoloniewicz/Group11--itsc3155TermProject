@@ -1,8 +1,6 @@
-<h1>Write a Review</h1>
-
 <section class = "py-5">
   <div class = "container">
-  <h1></h1>
+  <h1>Write a Review</h1>
     <div>
       <% if @review.errors.any? %>
     <div id="error_explanation">
@@ -18,7 +16,7 @@
     </div>
   <% end %>
     </div>
-      <%= flash[:message] %>
+      <h2><%= flash[:alert] %></h2>
     <div>
       <%= bootstrap_form_for :review, url: submit_review_path do |f| %> 
           <%= f.text_field :email, label: "Email Address" %>
